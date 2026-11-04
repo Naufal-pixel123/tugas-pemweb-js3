@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p style="margin-bottom: -1px">Data 1</p>
+    <input type="text" id="data1">
+    <br><br>
+    <p style="margin-bottom: -1px;">Data 2</p>
+    <input type="text" id="data2">
+    <br><br>
+    <button onclick="tambah(4,5)">Tambah dengan argumen</button>
+    <button onclick="tambah2()">Tambah tanpa argumen</button>
+    <button onclick="kurang()">kurang</button>
+    <br><br>
+    <input type="text" id="total">
+
+    <script>
+        a = 4;
+        a++;
+        document.write(a);
+        document.write("<br>");
+
+        b = 10;
+        b++;
+        document.write(b);
+        document.write("<br>");
+
+        a+=3;
+        document.write(a);
+        document.write("<br>");
+
+        a -=2;
+        document.write(a);
+        document.write("<br>");
+
+        c = 10 % 2;
+        document.write(c);
+        document.write("<br>");
+
+        function tambah(a,b) {
+            hasil = a + b;
+            document.write(hasil);
+            document.write("<br>"); 
+        }
+    </script>
+</body>
+</html>

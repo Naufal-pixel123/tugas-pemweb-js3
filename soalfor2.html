@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h4>Nama : Adanta Naufal Muqoffa</h4>
+    <h4>NIM : 20901022600015</h4>
+    <script>
+        document.write("Ini Menggunakan For <br>");
+        let barang = ["<br> Buku", "Pulpen", "Pensil", "Penggaris"];
+        let harga = [15000, 5000, 3000, 7000];
+
+        for (let i = 0; i < 4; i++) {
+            document.write(barang[i] + " = Rp" + harga[i] + "<br>");
+        }
+        let totalharga = 0;
+        totalharga = totalharga + harga[0] + harga[1] + harga[2] + harga[3];
+        document.write("Total Belanja = Rp" + totalharga);
+        document.write("<br>")
+        
+        document.write("<br> Ini Menggunakan While <br>");
+        let Barang = ["<br> Buku", "Pulpen", "Pensil", "Penggaris"];
+        let Harga = [15000, 5000, 3000, 7000];
+        let i = 0;
+        while (i < 4) {
+            document.write(Barang[i] + " = Rp" + Harga[i] + "<br>");
+            i++;
+        }
+        let total = 0;
+        total = total + Harga[0] + Harga[1] + Harga[2] + Harga[3];
+        document.write("Total Belanja (While) = Rp" + total);
+        document.write("<br>")
+
+        document.write("<br> Ini Menggunakan Do While <br>");
+        let barang1 = ["<br> Buku", "Pulpen", "Pensil", "Penggaris"];
+        let harga1 = [15000, 5000, 3000, 7000];
+        let j = 0;
+        do {
+            document.write(barang1[j] + " = Rp" + harga1[j] + "<br>");
+            j++;
+        } while (j < 4);
+        let total1 = 0;
+        total1 = total1 + harga1[0] + harga1[1] + harga1[2] + harga1[3];
+        document.write("Total Belanja (Do While) = Rp" + total1);
+    </script>
+</body>
+</html>
