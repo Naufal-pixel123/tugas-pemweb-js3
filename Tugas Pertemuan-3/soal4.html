@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Solusi Perulangan for dan while</title>
+</head>
+<body>
+  <h2>Soal 4: Validasi Input dengan while</h2>
+  <pre id="out4"></pre>
+  <script>
+    let input = prompt("Masukkan angka antara 1 dan 10:");
+    let angka = Number(input);
+    while (input !== null && (input.trim() === "" || isNaN(angka) || angka < 1 || angka > 10)) {
+      input = prompt("Input tidak valid! Masukkan angka antara 1 dan 10:");
+      angka = Number(input);
+    }
+    document.getElementById("out4").textContent =
+      input === null
+        ? "Input dibatalkan."
+        : "Angka yang Anda masukkan: " + angka;
+  </script>
+</body>
+</html>

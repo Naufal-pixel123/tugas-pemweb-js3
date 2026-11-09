@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Solusi Perulangan for dan while</title>
+</head>
+<body>
+    <h3>Adanta Naufal Muqoffa - 20901022600015</h3>
+    <h2>Soal 3: Pola Segitiga Bintang (for)</h2>
+    <pre id="out3"></pre>
+  <script>
+    let pola = "";
+    for (let baris = 1; baris <= 5; baris++) {
+      let bintang = "";
+      for (let k = 1; k <= baris; k++) {
+        bintang += "*";
+      }
+      pola += bintang + "\n";
+    }
+    document.getElementById("out3").textContent = pola;
+  </script>
+</body>
+</html>

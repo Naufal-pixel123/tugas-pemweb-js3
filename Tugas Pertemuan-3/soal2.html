@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Solusi Perulangan for dan while</title>
+</head>
+<body>
+    <h3>Adanta Naufal Muqoffa - 20901022600015</h3>
+  <h2>Soal 2: Jumlah Angka Genap 1-100 (while)</h2>
+  <pre id="out2"></pre>
+  <script>
+    let angkaGenap = 1;
+    let jumlah = 0;
+    while (angkaGenap <= 100) {
+      if (angkaGenap % 2 === 0) {
+        jumlah += angkaGenap;
+      }
+      angkaGenap++;
+    }
+    document.getElementById("out2").textContent =
+      "Jumlah angka genap dari 1 hingga 100 adalah: " + jumlah;
+  </script>
+</body>
+</html>

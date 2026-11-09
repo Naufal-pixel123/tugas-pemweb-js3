@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    document.write("<h3>Adanta Naufal Muqoffa-20901022600015</h3><br>");
+    let Total = 0;
+    let Rata2 = 0;
+    let Nilai = [
+        [80, 85],
+        [75, 90],
+        [90, 95]
+    ];
+    let k = 0;
+
+    while (k < Nilai.length) {
+        let j = 0;
+        while (j < Nilai[k].length) {
+            Total += Nilai[k][j];
+            document.write("Mahasiswa " + (k + 1) + ", Mata Kuliah " + (j + 1) + ": " + Nilai[k][j] + "<br>");
+            j++;
+        }
+        k++;
+    }
+    Rata2 = Total / (Nilai.length * Nilai[0].length);
+    document.write("Total nilai (While): " + Total);
+    document.write("<br>Rata-rata (While): " + Rata2.toFixed(2));
+    </script>
+</body>
+</html>

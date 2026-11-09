@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h4>Nama : Adanta Naufal Muqoffa</h4>
+    <h4>NIM : 20901022600015</h4>
+    <label for="baris"><h3>Tentukan Hasil : </h3></label>
+    <input type="number" id="jumlah" name="baris" placeholder="Masukkan Angka">
+    <br>
+    <button onclick="hitung()">Submit</button>
+    <h2>Deret Angka</h2>
+    <br>
+    <span    id="hasil"></span>
+    <script>
+        let angka = [
+            "satu",
+            "dua",
+            "tiga",
+            "empat",
+            "lima",
+            "enam",
+            "tujuh",
+            "delapan",
+            "sembilan",
+            "sepuluh"
+        ];
+
+        function hitung() {
+            let baris = parseInt(document.getElementById("jumlah").value);
+            let teks = "";
+
+            for (let i = 1; i <= baris; i++) {
+                for (let j = 1; j <= i; j++) {
+                    teks += angka[j - 1] + " ";
+                }
+                teks += "<br>";
+            }
+
+            document.getElementById("hasil").innerHTML = teks;
+        }
+    </script>
+</body>
+</html>

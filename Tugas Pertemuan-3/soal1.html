@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Solusi Perulangan for dan while</title>
+</head>
+<body>
+    <h1>Solusi Perulangan for dan while</h1>
+    <h3>Adanta Naufal Muqoffa - 20901022600015</h3>
+  
+  <h2>Soal 1: Bilangan Prima 1-50 (for)</h2>
+  <pre id="out1"></pre>
+  <script>
+    let prima = [];
+    for (let n = 2; n <= 50; n++) {
+      let isPrima = true;
+      for (let i = 2; i * i <= n; i++) {
+        if (n % i === 0) {
+          isPrima = false;
+          break;
+        }
+      }
+      if (isPrima) prima.push(n);
+    }
+    document.getElementById("out1").textContent = prima.join(", ");
+  </script>
+</body>
+</html>

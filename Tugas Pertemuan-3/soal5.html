@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Solusi Perulangan for dan while</title>
+</head>
+<body>
+  <h2>Soal 5: Faktorial (for)</h2>
+  <pre id="out5"></pre>
+
+  <script>
+    let angkaFaktorial = 5;
+    let faktorial = 1;
+    for (let i = angkaFaktorial; i >= 1; i--) {
+      faktorial *= i;
+    }
+    document.getElementById("out5").textContent =
+      "Faktorial dari " + angkaFaktorial + " adalah: " + faktorial;
+  </script>
+</body>
+</html>

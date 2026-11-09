@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biaya Parkir</title>
+</head>
+<body>
+    <h4>Nama : Adanta Naufal Muqoffa</h4>
+    <h4>NIM : 20901022600015</h4>
+    <h2>Hitung Biaya Parkir</h2>
+    <div id="hasil"></div>
+    <script>
+        var totalBiaya = 0;
+        var teksHasil = "";
+
+        for (var i = 1; i <= 10; i++) {
+            var biayaHariIni = 3000;
+
+            if (i % 4 == 0) {
+                biayaHariIni = 3500;
+            }
+            teksHasil = teksHasil + "Hari ke-" + i + " : Rp" + biayaHariIni + "<br>";
+            totalBiaya = totalBiaya + biayaHariIni;
+        }
+        teksHasil = teksHasil + "Total biaya parkir : Rp" + totalBiaya;
+        document.getElementById("hasil").innerHTML = teksHasil;
+    </script>
+</body>
+</html>
