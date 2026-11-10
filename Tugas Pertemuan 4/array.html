@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Tugas Array</title>
+</head>
+<body>
+    <h3>Nama : Adanta Naufal Muqoffa</h3>
+    <h3>NBI : 20901022600015</h3>
+<script>
+
+let nama = ["Andi", "Budi", "Citra", "Andi"];
+let nilai = [5, 9, 6, 5, 9, 3, 7];
+
+let coba = nama[0];   
+let coba2 = nilai[2];
+
+let kemunculanNama = {};
+
+for (let i = 0; i < nama.length; i++) {
+  let n = nama[i];
+  if (kemunculanNama[n]) {
+    kemunculanNama[n] = kemunculanNama[n] + 1;
+  } else {
+    kemunculanNama[n] = 1;
+  }
+}
+
+let hasilNama = [];
+for (let n in kemunculanNama) {
+  hasilNama.push(n + "=" + kemunculanNama[n]);
+}
+document.write("<br>Berapa kali setiap nama muncul,<br>");
+document.write(hasilNama.join(", ") + "<br>");
+
+let kemunculanAngka = {};
+
+for (let i = 0; i < nilai.length; i++) {
+  let a = nilai[i];
+  if (kemunculanAngka[a]) {
+    kemunculanAngka[a] = kemunculanAngka[a] + 1;
+  } else {
+    kemunculanAngka[a] = 1;
+  }
+}
+
+let hasilAngka = [];
+for (let a in kemunculanAngka) {
+  hasilAngka.push(a + "=" + kemunculanAngka[a]);
+}
+document.write("<br>Berapa kali setiap angka muncul<br>");
+document.write(hasilAngka.join(", <br>") + "<br>");
+
+document.write("<br>Berapa jumlah setiap angka tersebut<br>");
+for (let a in kemunculanAngka) {
+  let jumlah = Number(a) * kemunculanAngka[a];
+  document.write("jumlah angka " + a + " = " + jumlah + "<br>");
+}
+</script>
+</body>
+</html>
