@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manajemen Stok Pulpen</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+            background-color: #f2f2f2;
+        }
+
+        .container {
+            background: white;
+            padding: 20px;
+            max-width: 400px;
+            margin: auto;
+            border-radius: 10px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        input {
+            width: 95%;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        button {
+            padding: 10px;
+            width: 100%;
+            margin-bottom: 15px;
+            cursor: pointer;
+        }
+
+        #pesan {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Manajemen Stok Pulpen</h2>
+
+    <h3>Stok Pulpen: <span id="stok">5</span></h3>
+
+    <hr>
+
+    <h3>Penjualan Pulpen</h3>
+    <input type="number" id="jual" placeholder="Jumlah pulpen yang dijual">
+    <button onclick="jualPulpen()">Jual Pulpen</button>
+
+    <hr>
+
+    <h3>Pembelian dari Supplier</h3>
+    <input type="number" id="beli" placeholder="Jumlah pulpen yang dibeli">
+    <button onclick="beliPulpen()">Beli Pulpen</button>
+
+    <hr>
+
+    <p id="pesan"></p>
+</div>
+
+<script>
+    let stok = 5;
+
+    function jualPulpen() {
+        let jumlah = Number(document.getElementById("jual").value);
+
+        if (jumlah <= 0) {
+            document.getElementById("pesan").innerHTML =
+                "Tidak boleh menjual 0 atau minus!";
+        }
+        else if (jumlah > stok) {
+            document.getElementById("pesan").innerHTML =
+                "Stok tidak mencukupi!";
+        }
+        else {
+            stok = stok - jumlah;
+
+            document.getElementById("pesan").innerHTML =
+                "Berhasil menjual " + jumlah + " pulpen.";
+        }
+
+        document.getElementById("stok").innerHTML = stok;
+        document.getElementById("jual").value = "";
+    }
+
+    function beliPulpen() {
+        let jumlah = Number(document.getElementById("beli").value);
+
+        if (jumlah <= 0) {
+            document.getElementById("pesan").innerHTML =
+                "Tidak boleh membeli 0 atau minus!";
+        }
+        else {
+            stok = stok + jumlah;
+
+            document.getElementById("pesan").innerHTML =
+                "Berhasil membeli " + jumlah + " pulpen dari supplier.";
+        }
+
+        document.getElementById("stok").innerHTML = stok;
+        document.getElementById("beli").value = "";
+    }
+</script>
+
+</body>
+</html>
