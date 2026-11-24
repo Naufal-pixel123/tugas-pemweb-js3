@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>POS Taman Wisata</title>
+    <link rel="stylesheet" href="Wisata.css">
+</head>
+<body>
+<div class="container">
+    <label for="nama">Adanta Naufal Muqoffa</label>
+    <br>
+    <label for="NBI">20901022600015</label>
+    <h1>TAMAN WISATA</h1>
+    <h3>DATA TRANSAKSI</h3>
+
+    <label>Tanggal:</label>
+    <input type="date" id="tanggal">
+
+    <br><br>
+
+    <label>Nama Kasir:</label>
+    <input type="text" id="kasir" placeholder="Masukkan nama kasir">
+
+    <h3>PILIH TIKET</h3>
+
+    <label>Hari Kunjungan:</label>
+    <select id="hari" onchange="hitung()">
+        <option value="weekday">Weekday</option>
+        <option value="weekend">Weekend</option>
+    </select>
+
+    <br><br>
+
+    <table>
+        <tr>
+            <th>Kategori</th>
+            <th>Harga</th>
+            <th>QTY</th>
+            <th>Subtotal</th>
+        </tr>
+
+        <tr>
+            <td>Dewasa</td>
+            <td id="hargaDewasa">40.000</td>
+            <td>
+                <input type="number" id="dewasa"
+                value="0" min="0" oninput="hitung()">
+            </td>
+            <td id="subtotalDewasa">0</td>
+        </tr>
+
+        <tr>
+            <td>Anak-anak</td>
+            <td id="hargaAnak">20.000</td>
+            <td>
+                <input type="number" id="anak"
+                value="0" min="0" oninput="hitung()">
+            </td>
+            <td id="subtotalAnak">0</td>
+        </tr>
+    </table>
+
+    <div class="hasil">
+        <p>Promo: Setiap pembelian 5 tiket mendapatkan
+        1 tiket gratis (tiket anak-anak).</p>
+
+        <p>Total Tiket: <span id="totalTiket">0</span></p>
+
+        <p>Tiket Gratis: <span id="tiketGratis">0</span></p>
+
+        <p>Total Tiket Diterima:
+        <span id="totalDiterima">0</span></p>
+
+        <h3>Total Pembayaran:
+        Rp <span id="totalBayar">0</span></h3>
+    </div>
+
+    <h3>PEMBAYARAN</h3>
+
+    <label>Metode Pembayaran:</label>
+
+    <select id="metode">
+        <option value="Tunai">Tunai</option>
+        <option value="Transfer">Transfer</option>
+        <option value="QRIS">QRIS</option>
+    </select>
+
+    <br><br>
+
+    <label>Uang Diterima:</label>
+    <input type="number" id="uang" value="0"
+    min="0" oninput="hitung()">
+
+    <div class="hasil">
+        <h3>Kembalian:
+        Rp <span id="kembalian">0</span></h3>
+    </div>
+
+    <button onclick="batal()">BATAL</button>
+    <button onclick="simpan()">SIMPAN TRANSAKSI</button>
+
+    <div id="hasilTransaksi"></div>
+
+</div>
+
+<script src="Wisata.js"></script>
+
+</body>
+</html>

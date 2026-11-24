@@ -1,0 +1,51 @@
+ body {
+    font-family: arial;
+    background-color: #f1f1f1;
+}
+
+.container {
+    width: 600px;
+    margin: auto;
+    background-color: rgb(219, 209, 209);
+    padding: 20px;
+    border: 2px solid #fffb00;
+}
+
+h1 {
+    text-align: center;
+    background-color: rgba(251, 255, 0, 0.863);
+    padding: 15px;
+}
+
+h3 {
+    background-color: #e4f500;
+    padding: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+input, select {
+    padding: 7px;
+    width: 90%;
+}
+
+.hasil {
+    background-color: #dad8cbdd;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+button {
+    padding: 12px;
+    margin-top: 15px;
+    cursor: pointer;
+}

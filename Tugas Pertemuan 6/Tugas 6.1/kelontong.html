@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toko Kelontong - Point of Sale</title>
+  <link rel="stylesheet" href="kelontong.css">
+</head>
+<body>
+  <main class="app">
+    <header class="header">
+      <h1>TOKO KELONTONG</h1>
+      <p>POINT OF SALE (POS)</p>
+    </header>
+
+    <section class="card">
+      <h2 class="card-title">DATA TRANSAKSI</h2>
+      <div class="row">
+        <label>No. Transaksi</label>
+        <input type="text" id="noTrx" class="field readonly">
+        <label class="ml">Tanggal</label>
+        <input type="date" id="tanggal" class="field readonly">
+      </div>
+      <div class="row">
+        <label>Nama Kasir</label>
+        <input type="text" id="kasir" class="field grow" placeholder="Masukkan nama kasir">
+      </div>
+    </section>
+
+    <section class="card">
+      <h2 class="card-title">DAFTAR BARANG</h2>
+      <table>
+        <thead>
+          <tr><th>Barang</th><th>Harga</th><th>QTY</th><th>Subtotal</th></tr>
+        </thead>
+        <tbody id="daftarBarang"></tbody>
+      </table>
+      <button type="button" id="btnTambah" class="link-btn">+ Tambah Barang</button>
+      <div class="total-row">
+        <span>Total Belanja</span>
+        <strong id="totalBelanja">0</strong>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2 class="card-title">PEMBAYARAN</h2>
+      <div class="pay-row">
+        <label>Diskon (%)</label>
+        <input type="number" id="diskon" class="field small" value="0" min="0" max="100" step="any">
+        <span>%</span>
+        <span class="sep">Potongan Diskon</span>
+        <span id="potongan" class="val">0</span>
+      </div>
+      <div class="total-row yellow">
+        <span>Total Bayar</span>
+        <strong id="totalBayar">0</strong>
+      </div>
+      <div class="pay-row">
+        <label>Uang Diterima</label>
+        <input type="number" id="uang" class="field wide" value="0" min="0">
+      </div>
+      <div class="total-row green">
+        <span>Kembalian</span>
+        <strong id="kembalian">0</strong>
+      </div>
+    </section>
+
+    <div class="actions">
+      <button type="button" id="btnBatal" class="btn gray">BATAL</button>
+      <button type="button" id="btnSimpan" class="btn green">SIMPAN TRANSAKSI</button>
+    </div>
+  </main>
+
+  <div id="modal" class="modal hidden">
+    <div class="modal-box">
+      <h3>Transaksi Berhasil</h3>
+      <pre id="struk"></pre>
+      <button type="button" id="btnTutup" class="btn green">OK</button>
+    </div>
+  </div>
+  <div id="toast" class="toast hidden"></div>
+
+  <script src="kelontong.js"></script>
+</body>
+</html>

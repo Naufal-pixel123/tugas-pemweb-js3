@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JB Pulpen</title>
+</head>
+<body>
+    <h1 style="text-align: center;">Stok Pulpen</h1>
+   <h2 style="text-align: center;">Adanta Naufal Muqoffa - 20901022600015</h2>
+  <p>Harga per unit: Rp <span id="harga">1500</span></p>
+  <p>Stok: <b id="stok">5</b></p>
+
+  <h3>Jual Pulpen</h3>
+  <input type="number" id="inputJual" placeholder="Jumlah dijual">
+  <button onclick="jual()">Jual</button>
+
+  <h3>Beli dari Supplier</h3>
+  <input type="number" id="inputBeli" placeholder="Jumlah dibeli">
+  <button onclick="beli()">Beli</button>
+  
+
+  <p id="pesan"></p>
+
+  <script>
+    let stok = 5;
+    let harga = 1500;
+
+    function jual() {
+      let jumlah = Number(document.getElementById("inputJual").value);
+
+      if (jumlah <= 0) {
+        tampilPesan("Gagal: jumlah tidak boleh 0 atau minus");
+      } else if (jumlah > stok) {
+        tampilPesan("Gagal: stok tidak cukup");
+      } else {
+        stok = stok - jumlah;
+        tampilPesan("Berhasil jual " + jumlah + " pulpen. Total: Rp " + (jumlah * harga));
+      }
+      updateStok();
+    }
+
+    function beli() {
+      let jumlah = Number(document.getElementById("inputBeli").value);
+
+      if (jumlah <= 0) {
+        tampilPesan("Gagal: jumlah tidak boleh 0 atau minus");
+      } else {
+        stok = stok + jumlah;
+        tampilPesan("Berhasil beli " + jumlah + " pulpen dari supplier");
+      }
+      updateStok();
+    }
+
+    function updateStok() {
+      document.getElementById("stok").innerText = stok;
+    }
+
+    function tampilPesan(teks) {
+      document.getElementById("pesan").innerText = teks;
+    }
+  </script>
+</body>
+</html>
